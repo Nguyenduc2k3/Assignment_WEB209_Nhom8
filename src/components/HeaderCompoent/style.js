@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const WrapperHeader = styled(Row)`
-    background-color: var(--primary-color);
+    background-color: rgba(74, 29, 34, 0.9);
     align-items: center;
     gap: 16px;
     flex-wrap: nowrap;
-    width: 1270px;
-    padding: 10px 0;
+    width: 100%;
+    padding: 30px 60px;
 `
 
 export const WrapperTextHeader = styled(Link)`
-    font-size: 18px;
+    font-size: 30px;
+    font-family: 'Kristi', sans-serif !important;
     color: #fff;
     font-weight: bold;
     text-align: left;
     &:hover {
-        font-size: 18px;
-        color: #fff;
+        color: rgb(192, 201, 6);
     }
 `
 

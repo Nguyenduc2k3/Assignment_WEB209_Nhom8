@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { getItem } from '../../utils';
 import { UserOutlined, AppstoreOutlined, ShoppingCartOutlined } from '@ant-design/icons'
 import HeaderComponent from '../../components/HeaderCompoent/HeaderComponent';
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
 import AdminUser from '../../components/AdminUser/AdminUser';
 import AdminProduct from '../../components/AdminProduct/AdminProduct';
 import OrderAdmin from '../../components/OrderAdmin/OrderAmin';
@@ -73,17 +74,17 @@ const AdminPage = () => {
   const renderPage = (key) => {
     switch (key) {
       case 'users':
-        return (
-          <AdminUser />
-        )
+        // return (
+        //   <AdminUser />
+        // )
       case 'products':
         return (
           <AdminProduct />
         )
       case 'orders':
-        return (
-          <OrderAdmin />
-        )
+        // return (
+        //   <OrderAdmin />
+        // )
       default:
         return <></>
     }
@@ -116,6 +117,7 @@ const AdminPage = () => {
           {renderPage(keySelected)}
         </div>
       </div>
+      <FooterComponent/>
     </>
   )
 }

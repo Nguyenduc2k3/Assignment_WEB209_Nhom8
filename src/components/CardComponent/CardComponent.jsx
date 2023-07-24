@@ -14,29 +14,30 @@ const CardComponent = (props) => {
     return (
         <WrapperCardStyle
             hoverable
-            headStyle={{ width: '200px', height: '200px' }}
-            style={{ width: 200 }}
-            bodyStyle={{ padding: '10px' }}
+            headStyle={{ width: '200px', height: '200px', borderRadius: '8px 8px 0 0' }}
+            style={{ width: 240, borderRadius: '15px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+            bodyStyle={{ padding: '10px', borderRadius: '0 0 8px 8px' }}
             cover={<img alt="example" src={image} />}
-            onClick={() =>  handleDetailsProduct(id)}
+            onClick={() => handleDetailsProduct(id)}
         >
-            <img
+
+            {/* <img
                 src={logo}
                 style={{
                     width: '68px',
-                    height: '14px',
+                    height: '24px',
                     position: 'absolute',
                     top: -1,
                     left: -1,
                     borderTopLeftRadius: '3px'
                 }}
-            />
-            <StyleNameProduct>{name}</StyleNameProduct>
+            /> */}
+            <StyleNameProduct><strong>{name}</strong></StyleNameProduct>
             <WrapperReportText>
                 <span style={{ marginRight: '4px' }}>
                     <span>{rating} </span> <StarFilled style={{ fontSize: '12px', color: 'rgb(253, 216, 54)' }} />
                 </span>
-                <WrapperStyleTextSell> | Da ban {selled || 1000}+</WrapperStyleTextSell>
+                <WrapperStyleTextSell> | Đã bán {selled || 1000}+</WrapperStyleTextSell>
             </WrapperReportText>
             <WrapperPriceText>
                 <span style={{ marginRight: '8px' }}>{convertPrice(price)}</span>

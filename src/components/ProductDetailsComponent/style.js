@@ -13,10 +13,11 @@ export const WrapperStyleColImage = styled(Col)`
 
 export const WrapperStyleNameProduct = styled.h1`
     color: rgb(36, 36, 36);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 32px;
     word-break: break-word;
+    font-weight: bold;
 `
 
 export const WrapperStyleTextSell = styled.span`
@@ -37,6 +38,7 @@ export const WrapperPriceTextProduct = styled.h1`
     font-weight: 500;
     padding: 10px;
     margin-top: 10px;
+    color: red;
 `
 
 export const WrapperAddressProduct = styled.div`

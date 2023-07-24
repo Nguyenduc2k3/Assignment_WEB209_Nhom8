@@ -46,7 +46,7 @@ const NavBarComponent = () => {
         <div>
             <WrapperLableText>Lable</WrapperLableText>
             <WrapperContent>
-                {renderContent('text', ['Tu lanh', 'TV', 'MAYGIAT'])}
+                {renderContent('text', ['Bánh kem', 'Bánh Sinh Nhật', 'Bánh Chocolate'])}
             </WrapperContent>
         </div>
     )

@@ -1,20 +1,41 @@
 import { Card } from "antd";
 import styled from "styled-components";
 
+// export const WrapperCardStyle = styled(Card)`
+//     width: 200px;
+//     & img {
+//         height: 200px;
+//         width: 100%;
+//         border-radius:12px 12px 0 0;
+//     },
+//     position: relative;
+//     background-color: ${props => props.disabled ? '#ccc' : '#fff'};
+//     cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'}
+// `
 export const WrapperCardStyle = styled(Card)`
-    width: 200px;
-    & img {
-        height: 200px;
-        width: 200px;
-    },
-    position: relative;
-    background-color: ${props => props.disabled ? '#ccc' : '#fff'};
-    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'}
-`
+  width: 200px;
+  position: relative;
+  background-color: ${props => (props.disabled ? '#ccc' : '#fff')};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+
+  & img {
+    height: 200px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.2s ease-in-out; /* Add smooth transition on transform */
+  }
+
+  &:hover img {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+  }
+`;
+
+
+
 
 export const StyleNameProduct = styled.div`
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 16px;
     color: rgb(56, 56, 61);
     font-weight: 400;

@@ -18,7 +18,7 @@ const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search)
   const searchDebounce = useDebounce(searchProduct, 500)
   const [loading, setLoading] = useState(false)
-  const [limit, setLimit] = useState(6)
+  const [limit, setLimit] = useState(4)
   const [typeProducts, setTypeProducts] = useState([])
   
   const fetchProductAll = async (context) => {
@@ -45,18 +45,22 @@ const HomePage = () => {
 
   return (
     <Loading isLoading={isLoading || loading}>
-      <div style={{ width: '1270px', margin: '0 auto' }}>
-        <WrapperTypeProduct>
-          {typeProducts.map((item) => {
-            return (
-              <TypeProduct name={item} key={item}/>
-            )
-          })}
-        </WrapperTypeProduct>
-      </div>
-      <div className='body' style={{ width: '100%', backgroundColor: '#efefef', }}>
-        <div id="container" style={{ height: '1000px', width: '1270px', margin: '0 auto' }}>
+      
+      <div className='body' style={{ width: '100%', backgroundImage: 'url(https://img6.thuthuatphanmem.vn/uploads/2022/03/15/background-hoa-van-mau-kem_084301542.png)' }}>
+        <div id="container" style={{ height: '100%', width: '100%', margin: '0 auto' }}>
           <SliderComponent arrImages={[slider1, slider2, slider3]} />
+          <div style={{ width: '1270px', margin: '0 auto' }}>
+            <WrapperTypeProduct>
+              {typeProducts.map((item) => {
+                return (
+                  <TypeProduct name={item} key={item}/>
+                )
+              })}
+            </WrapperTypeProduct>
+          </div>
+          <div>
+            <h2 style={{color:'#c0c906', fontWeight:'bold', textAlign:'center', fontSize:"32px", margin: "20px 0 50px 0"}}>BỘ SƯU TẬP SIÊU PHẨM CHÀO HÈ 2023</h2>
+          </div>
           <WrapperProducts>
             {products?.data?.map((product) => {
               return (
@@ -79,7 +83,7 @@ const HomePage = () => {
           <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
             <WrapperButtonMore
               textbutton={isPreviousData ? 'Load more' : "Xem thêm"} type="outline" styleButton={{
-                border: `1px solid ${products?.total === products?.data?.length ? '#f5f5f5' : '#9255FD'}`, color: `${products?.total === products?.data?.length ? '#f5f5f5' : '#9255FD'}`,
+                border: `1px solid ${products?.total === products?.data?.length ? '#f5f5f5' : '#3d1a1a'}`, color: `${products?.total === products?.data?.length ? '#f5f5f5' : '#3d1a1a'}`,
                 width: '240px', height: '38px', borderRadius: '4px'
               }}
               disabled={products?.total === products?.data?.length || products?.totalPage === 1}

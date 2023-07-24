@@ -12,20 +12,29 @@ export const WrapperTypeProduct = styled.div`
 export const WrapperButtonMore = styled(ButtonComponent)`
     &:hover {
         color: #fff;
-        background: #9255FD;
+        background: #3d1a1a;
         span {
             color: #fff;
         }
     }
     width: 100%;
-    color: #9255FD;
+    color: #3d1a1a;
     text-align: center;
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointers'}
 `
 
+// export const WrapperProducts = styled.div`
+//     display: flex;
+//     gap: 14px;
+//     margin-top:20px;
+//     flex-wrap: wrap;
+// `
 export const WrapperProducts = styled.div`
-    display: flex;
-    gap: 14px;
-    margin-top:20px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  gap: 40px; /* Spacing between grid items */
+  margin-top: 20px;
+  width: 200px;
+  margin-left:200px;
+  margin-bottom: 50px;
 `

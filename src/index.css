@@ -1,6 +1,11 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 @import 'antd/dist/antd.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Plus+Jakarta+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+
+
 
 :root {
   --primary-color: #9255FD;
@@ -13,6 +18,7 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 html {
